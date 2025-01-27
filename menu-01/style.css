@@ -10,11 +10,11 @@
 :root {
     --body-color: #9B27B00D;
     --siderbar-color: #FFFFFF;
-    --primary-color: #9C27BC;
+    --primary-color: #6261cc;
     --primary-color-light: #9B27B00D;
     --tooggle-color: #DDDDDD;
     --secondary-color: #fff;
-    --text-color: #707070;
+    --text-color: #012970;
     --tran-03: all 0.2s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.4s ease;
@@ -24,6 +24,8 @@ body {
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
+
+    
 }
 
 ::selection {
@@ -559,3 +561,129 @@ body.dark .divider-menu-notifications {
 
 
 
+/*	INICIO BOTONES WIDGET DEL HOME	*/
+.widget-container {
+    display: flex;
+  }
+  
+  .printer-widget {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6261cc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .printer-widget i {
+    font-size: 24px;
+  }
+  
+  .printer-widget span {
+    margin-top: 10px;
+  }
+  
+  .printer-widget:hover {
+    background-color: #50169c;
+  }
+  
+  .printer-widget:active {
+    transform: translateY(2px);
+  }
+  
+  /*	FIN BOTONES WIDGET DEL HOME	*/
+
+  .dashboard {
+    padding: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  .card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card .number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.card .percentage {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Colores de fondo específicos para cada tarjeta */
+.card-1 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card-2 {
+    background: linear-gradient(135deg, #ff6f61, #ff9a44);
+}
+
+.card-3 {
+    background: linear-gradient(135deg, #2ecc71, #1abc9c);
+}
+
+.card-4 {
+    background: linear-gradient(135deg, #e74c3c, #e67e22);
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 tarjetas por fila */
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 tarjetas por fila */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%; /* 1 tarjeta por fila */
+    }
+}
