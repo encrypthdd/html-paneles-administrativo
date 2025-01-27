@@ -18,6 +18,10 @@
     --tran-03: all 0.2s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.4s ease;
+
+    --bg-color: #ffffff;
+    --card-bg: #ffffff;
+    --grid-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -36,10 +40,16 @@ body {
 body.dark { 
     --body-color: #1e222c;
     --siderbar-color: #212631;
-    --primary-color: #2a303d;
+    /*--primary-color: #2a303d;*/
+    --primary-color: #6261cc;
     --primary-color-light: #2a303d;
     --tooggle-color: #FFFFFF;
     --text-color: #CCCCCC;
+
+    --bg-color: #121212;
+    /*--card-bg: #1e1e1e;*/
+    --card-bg:#1e222c;
+    --grid-color: rgba(255, 255, 255, 0.1);
 }
 
 .sidebar {
@@ -686,4 +696,25 @@ body.dark .divider-menu-notifications {
     .card {
         flex: 1 1 100%; /* 1 tarjeta por fila */
     }
+}
+
+/* Grafico */
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.chart-container {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
